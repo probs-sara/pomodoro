@@ -7,25 +7,43 @@
     <link href="https://fonts.googleapis.com/css2?family=EG+Garamond:wght@400;500;600;700&family=Fira+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="./style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pomodoro Timer</title>
+    <title>productivity corner !</title>
  </head>
  <body>
-    <div class="app-container">
-        <h1>pomodoro</h1>
-        <div class="app-message">press start to begin</div>
-        <div class="app-circle">
-            <div class="circle-shape">
-                <div class="semi-circle right-side circle-mask"></div>
-                <div class="semi-circle right-side circle"></div>
-                <div class="semi-circle left-side circle-mask"></div>
-                <div class="semi-circle left-side circle"></div>
+    <div class="flex-setup">
+        <div class="app-container">
+            <h1>pomodoro</h1>
+            <div class="app-message">press start to begin</div>
+            <div class="app-circle">
+                <div class="circle-shape">
+                    <div class="semi-circle right-side circle-mask"></div>
+                    <div class="semi-circle right-side circle"></div>
+                    <div class="semi-circle left-side circle-mask"></div>
+                    <div class="semi-circle left-side circle"></div>
+                </div>
+                <div class="app-counter-box">
+                    <p><span class="minutes">25</span>:<span class="seconds">00</span></span></p>
+                </div>
+                <button class="button-start">start</button>
             </div>
-            <div class="app-counter-box">
-                <p><span class="minutes">25</span>:<span class="seconds">00</span></span></p>
+        </div>
+        <div class="to-do-container">
+            <h1>to-do list</h1>
+            <div class="todo-form">
+                <input class="input-item" type="text" name="input_box" id="input-box" placeholder="add task here" />
+                <button id="input-button" onclick="addTask()">Add</button>
             </div>
-            <button class="button-start">start</button>
+            <h2>Task List</h2>
+            <ul id="list-container"></ul>
+            <hr />
+            <div class="counter-container">
+                <div id="task-counters">
+                    completed tasks: <span id="completed-counter">0</span> | incomplete tasks: <span id="incomplete-counter">0</span>
+                </div>
+            </div>
         </div>
     </div>
+    
  </body>
  <script src="script.js"></script>
  </html>
