@@ -7,7 +7,7 @@ let state = true;
 startBtn.addEventListener('click', appTimer);
 
 const appTimer = () => {
-    const sessionAmount = Number.parseInt(session.textContent)
+    const sessionAmount = Number.parseInt(session.textContent);
 
     if(state) {
         state = false;
@@ -27,7 +27,7 @@ const appTimer = () => {
             } else {
                 secondDiv.textContent = secondsLeft;
             }
-            minuteDiv.textContent = `${minutesLeft}`
+            minuteDiv.textContent = `${minutesLeft}`;
 
             if(minutesLeft === 0 && secondsLeft === 0){
                 bells.play();
@@ -37,6 +37,6 @@ const appTimer = () => {
 
         myInterval = setInterval(updateSeconds, 1000);
     } else {
-        alert('Session has already started.')
+        alert('Session has already started.');
     }
 }
