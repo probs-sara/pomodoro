@@ -59,30 +59,29 @@ function addTask() {
     <span class="delete-btn"> delete </span>`;
     listContainer.appendChild(li);
     inputBox.value="";
+    const checkbox = li.querySelector("input");
+    const editBtn = li.querySelector(".edit-btn");
+    const taskSpan = li.querySelector("span");
+    const deleteBtn = li.querySelector(".delete-btn");
+
+    checkbox.addEventListener("click", function () {
+        li.classList.toggle("completed", checkbox.checked);
+        updateCounters();
+    });
+    editBtn.addEventListener("click", function () {
+        const update = prompt("Edit task:", taskSpan.textContent);
+        if(update !== null) {
+            taskSpan.textContent = update;
+            li.classList.remove("completed");
+            updateCounters();
+        }
+    });
+    deleteBtn.addEventListener("click", function () {
+        li.remove();
+        updateCounters();
+    });
     updateCounters();
 }
-
-const checkbox = li.querySelector("input");
-const editBtn = li.querySelector(".edit-btn");
-const taskSpan = li.querySelector("span");
-const deleteBtn = li.querySelector(".delete-btn");
-
-checkbox.addEventListener("click", function () {
-    li.classList.toggle("completed", checkbox.checked);
-    updateCounters();
-});
-editBtn.addEventListener("click", function () {
-    const update = prompt("Edit task:", taskSpan.textContent);
-    if(update !== null) {
-        taskSpan.textContent = update;
-        li.classList.remove("completed");
-        updateCounters();
-    }
-});
-deleteBtn.addEventListener("click", function () {
-    li.remove();
-    updateCounters();
-});
 
 function updateCounters() {
     const completedTasks = document.querySelectorAll(".completed").length;
@@ -90,6 +89,12 @@ function updateCounters() {
     completedCounter.textContent = completedTasks;
     incompleteCounter.textContent = incompleteTasks;
 }
+
+inputBox.addEventListener("keyup", function (event) {
+    if(event.key==="Enter") {
+        addTask();
+    }
+});
 
 startBtn.addEventListener('click', appTimer);
 updateCounters();
