@@ -55,8 +55,9 @@ function addTask() {
         <input type="checkbox">
         <span>${task}</span>
     </label>
+    <span class="delete-btn"> delete </span>
     <span class="edit-btn"> edit </span>
-    <span class="delete-btn"> delete </span>`;
+    `;
     listContainer.appendChild(li);
     inputBox.value="";
     const checkbox = li.querySelector("input");

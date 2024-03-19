@@ -109,6 +109,10 @@ p {
     color: #F4ACB7;
 }
 
+hr {
+    color: #F4ACB7;
+}
+
 .to-do-container {
     width: 400px;
     margin: 40px auto;
@@ -142,10 +146,13 @@ p {
     border: none;
     border-radius: 5px;
     font-family: 'Fira Sans', sans-serif;
+    background-color: #F4ACB7;
+    color: #d8e2dc;
 }
 
 .input-button:hover {
-    
+    color: #F4ACB7;
+    background-color: #d8e2dc;
 }
 
 ul {
@@ -169,6 +176,5 @@ li {
     cursor: pointer;
     margin: 3px 5px;
     border: none;
-    padding: 3px 5px;
     background: none;
 }
