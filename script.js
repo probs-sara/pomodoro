@@ -79,6 +79,10 @@ editBtn.addEventListener("click", function () {
         updateCounters();
     }
 });
+deleteBtn.addEventListener("click", function () {
+    li.remove();
+    updateCounters();
+});
 
 function updateCounters() {
     const completedTasks = document.querySelectorAll(".completed").length;
