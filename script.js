@@ -4,8 +4,6 @@ const session = document.querySelector('.minutes');
 let myInterval;
 let state = true;
 
-startBtn.addEventListener('click', appTimer);
-
 const appTimer = () => {
     const sessionAmount = Number.parseInt(session.textContent);
 
@@ -40,3 +38,5 @@ const appTimer = () => {
         alert('Session has already started.');
     }
 }
+
+startBtn.addEventListener('click', appTimer);
