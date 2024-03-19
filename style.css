@@ -107,3 +107,7 @@ button {
 button:hover {
     color: #F4ACB7;
 }
+
+.to-do-container {
+    width: 100%;
+}
