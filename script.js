@@ -18,9 +18,9 @@ const appTimer = () => {
             totalSeconds--;
 
             let minutesLeft = Math.floor(totalSeconds/60);
-            let secondsLeft = totalSeconds % 6;
+            let secondsLeft = totalSeconds % 60;
 
-            if(secondsLeft > 10){
+            if(secondsLeft < 10){
                 secondDiv.textContent = '0' + secondsLeft;
             } else {
                 secondDiv.textContent = secondsLeft;
