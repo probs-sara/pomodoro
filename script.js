@@ -3,6 +3,8 @@ const startBtn = document.querySelector('.button-start');
 const session = document.querySelector('.minutes');
 const inputBox = document.getElementById("input-box");
 const listContainer = document.getElementById("list-container");
+const completedCounter = document.getElementById("completed-counter");
+const incompleteCounter = document.getElementById("incomplete-counter");
 let myInterval;
 let state = true;
 
@@ -57,6 +59,33 @@ function addTask() {
     <span class="delete-btn"> delete </span>`;
     listContainer.appendChild(li);
     inputBox.value="";
+    updateCounters();
+}
+
+const checkbox = li.querySelector("input");
+const editBtn = li.querySelector(".edit-btn");
+const taskSpan = li.querySelector("span");
+const deleteBtn = li.querySelector(".delete-btn");
+
+checkbox.addEventListener("click", function () {
+    li.classList.toggle("completed", checkbox.checked);
+    updateCounters();
+});
+editBtn.addEventListener("click", function () {
+    const update = prompt("Edit task:", taskSpan.textContent);
+    if(update !== null) {
+        taskSpan.textContent = update;
+        li.classList.remove("completed");
+        updateCounters();
+    }
+});
+
+function updateCounters() {
+    const completedTasks = document.querySelectorAll(".completed").length;
+    const incompleteTasks = document.querySelectorAll("li:not(.completed)").length;
+    completedCounter.textContent = completedTasks;
+    incompleteCounter.textContent = incompleteTasks;
 }
 
 startBtn.addEventListener('click', appTimer);
+updateCounters();
