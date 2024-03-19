@@ -35,6 +35,7 @@ const appTimer = () => {
                 bells.play();
                 clearInterval(myInterval);
             }
+            document.title=minutesLeft+":"+secondsLeft;
         }
 
         myInterval = setInterval(updateSeconds, 1000);
