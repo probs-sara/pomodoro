@@ -134,6 +134,7 @@ hr {
 }
 
 .input-item {
+    width: 80%;
     max-width: 90%;
     padding: 10px;
     border: 1px solid #ccc;
@@ -173,6 +174,10 @@ li {
     margin-bottom: 10px;
     padding: 10px;
     margin-top: 10px;
+}
+
+.task {
+    max-width: 90%;
 }
 
 .edit-btn, .delete-btn {
