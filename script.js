@@ -12,8 +12,6 @@ let round = 1;
 let restart = false;
 
 const startTimer = () => {
-    const sessionAmount = Number.parseInt(session.textContent);
-    const leftoversAdd = Number.parseInt(leftovers.textContent);
     if(restart){
         if(round%4 === 0){
             session.textContent="5";
@@ -22,6 +20,8 @@ const startTimer = () => {
         }
         restart=false;
     }
+    const sessionAmount = Number.parseInt(session.textContent);
+    const leftoversAdd = Number.parseInt(leftovers.textContent);
     if(state) {
         state = false;
         let totalSeconds = sessionAmount * 60 + leftoversAdd;
