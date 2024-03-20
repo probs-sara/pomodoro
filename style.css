@@ -1,3 +1,5 @@
+/* coolors palette: https://coolors.co/d8e2dc-ffffff-ffcad4-f4acb7-45353a */
+
 html {
     font-family: 'Fira Sans', sans-serif;
     font-size: 20px;
@@ -24,7 +26,7 @@ p {
 }
 
 .app-message {
-    /* height: 60px; */
+    height: 60px; 
     margin: 10px auto 20px auto;
 }
 
@@ -188,12 +190,11 @@ li {
 
 .task-item {
     display: flex;
-    justify-content: flex-end;
     flex-wrap: nowrap;
 }
 
 .task {
-    width: 80%;
+    width: 100%;
 }
 
 .heart-bar {
