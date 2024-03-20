@@ -106,6 +106,7 @@ p {
     outline: none;
     color: #45353A;
     padding: 5px;
+    text-align: center;
 }
 
 .button-start:hover {
