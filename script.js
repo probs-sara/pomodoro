@@ -48,7 +48,7 @@ const startTimer = () => {
                 document.title="work session done!";
                 round++;
                 restart=true;
-                if(round===1){
+                if(round===2){
                     const firstHeart = document.querySelector(".first-heart");
                     firstHeart.src="./images/half_heart.png"
                 }
