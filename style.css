@@ -22,7 +22,7 @@ p {
 
 .flex-setup {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: flex-start;
 }
 
 .app-message {
@@ -118,7 +118,7 @@ hr {
 }
 
 .to-do-container {
-    width: 400px;
+    width: 100%;
     margin: 40px auto;
     border: 2px solid #F4ACB7;
     padding: 20px;
@@ -127,8 +127,8 @@ hr {
 }
 
 .todo-form {
-    display: flex;
-    justify-content: space-between;
+    /* display: flex;
+    justify-content: space-between; */
 }
 
 .completed {
@@ -189,12 +189,12 @@ li {
 }
 
 .task-item {
-    display: flex;
-    flex-wrap: nowrap;
+    /* display: flex;
+    flex-wrap: nowrap; */
 }
 
 .task {
-    width: 100%;
+    /* width: 100%; */
 }
 
 .heart-bar {
