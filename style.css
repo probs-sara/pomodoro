@@ -202,6 +202,7 @@ li {
     width: 80%;
     margin-top: 20px;
     border: 2px #45353A;
+    margin: 0 auto;
 }
 
 .first-heart, .second-heart, .third-heart, .fourth-heart {
