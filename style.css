@@ -201,6 +201,7 @@ li {
     justify-content: space-evenly;
     width: 80%;
     margin-top: 20px;
+    border: 2px #45353A;
 }
 
 .first-heart, .second-heart, .third-heart, .fourth-heart {
