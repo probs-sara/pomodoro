@@ -1,6 +1,7 @@
 const bells = new Audio('./sounds/bell.wav');
 const startBtn = document.querySelector('.button-start');
 const session = document.querySelector('.minutes');
+const leftovers = document.querySelector('.seconds');
 const inputBox = document.getElementById("input-box");
 const listContainer = document.getElementById("list-container");
 const completedCounter = document.getElementById("completed-counter");
@@ -10,9 +11,10 @@ let state = true;
 
 const startTimer = () => {
     const sessionAmount = Number.parseInt(session.textContent);
+    const leftoversAdd = Number.parseInt(leftovers.textContent);
     if(state) {
         state = false;
-        let totalSeconds = sessionAmount * 60;
+        let totalSeconds = sessionAmount * 60 + leftoversAdd;
         startBtn.textContent="pause";
         const updateSeconds = () => {
             const minuteDiv = document.querySelector('.minutes');
@@ -52,12 +54,14 @@ function addTask() {
     }
     const li = document.createElement("li");
     li.innerHTML = `
+    <div class="task-item">
     <label>
         <input type="checkbox">
-        <span>${task}</span>
+        <span class="task">${task}</span>
     </label>
     <span class="delete-btn"> delete </span>
     <span class="edit-btn"> edit </span>
+    </div>
     `;
     listContainer.appendChild(li);
     inputBox.value="";

@@ -110,7 +110,7 @@ p {
 }
 
 hr {
-    border: #F4ACB7;
+    border: 1px #F4ACB7;
 }
 
 .to-do-container {
@@ -182,4 +182,14 @@ li {
     margin: 3px 5px;
     border: none;
     background: none;
+}
+
+.task-item {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+}
+
+.task {
+    width: 80%;
 }
