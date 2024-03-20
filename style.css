@@ -99,11 +99,10 @@ p {
     position: relative;
     top: 50px;
     font-size: 80%;
-    text-transform: uppercase;
     letter-spacing: 1px;
     border: none;
     background-color: #F4ACB7;
-    border-radius: 20%;
+    border-radius: 20px;
     outline: none;
     color: #45353A;
 }
