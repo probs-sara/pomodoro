@@ -8,37 +8,37 @@ const incompleteCounter = document.getElementById("incomplete-counter");
 let myInterval;
 let state = true;
 
-const appTimer = () => {
+const startTimer = () => {
     const sessionAmount = Number.parseInt(session.textContent);
-
     if(state) {
         state = false;
         let totalSeconds = sessionAmount * 60;
-
+        startBtn.textContent="pause";
         const updateSeconds = () => {
             const minuteDiv = document.querySelector('.minutes');
             const secondDiv = document.querySelector('.seconds');
-
             totalSeconds--;
-
             let minutesLeft = Math.floor(totalSeconds/60);
             let secondsLeft = totalSeconds % 60;
-
             if(secondsLeft < 10){
                 secondDiv.textContent = '0' + secondsLeft;
+                document.title=minutesLeft+":0"+secondsLeft;
             } else {
                 secondDiv.textContent = secondsLeft;
+                document.title=minutesLeft+":"+secondsLeft;
             }
             minuteDiv.textContent = `${minutesLeft}`;
-
             if(minutesLeft === 0 && secondsLeft === 0){
                 bells.play();
                 clearInterval(myInterval);
+                state=true;
             }
-            document.title=minutesLeft+":"+secondsLeft;
         }
-
         myInterval = setInterval(updateSeconds, 1000);
+    } else if(startBtn.textContent==="pause"){
+        clearInterval(myInterval);
+        startBtn.textContent="resume";
+        state=true;
     } else {
         alert('Session has already started.');
     }
@@ -98,5 +98,5 @@ inputBox.addEventListener("keyup", function (event) {
     }
 });
 
-startBtn.addEventListener('click', appTimer);
+startBtn.addEventListener('click', startTimer);
 updateCounters();

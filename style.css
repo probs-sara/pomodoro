@@ -110,7 +110,7 @@ p {
 }
 
 hr {
-    color: #F4ACB7;
+    border: #F4ACB7;
 }
 
 .to-do-container {
@@ -122,6 +122,11 @@ hr {
     border-radius: 15px;
 }
 
+.todo-form {
+    display: flex;
+    justify-content: space-between;
+}
+
 .completed {
     text-decoration: line-through;
     color: gray;
@@ -129,7 +134,7 @@ hr {
 }
 
 .input-item {
-    width: 200px;
+    width: 80%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
