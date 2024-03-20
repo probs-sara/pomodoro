@@ -8,10 +8,20 @@ const completedCounter = document.getElementById("completed-counter");
 const incompleteCounter = document.getElementById("incomplete-counter");
 let myInterval;
 let state = true;
+let round = 1;
+let restart = false;
 
 const startTimer = () => {
     const sessionAmount = Number.parseInt(session.textContent);
     const leftoversAdd = Number.parseInt(leftovers.textContent);
+    if(restart){
+        if(round%4 === 0){
+            session.textContent="5";
+        } else {
+            session.textContent="25";
+        }
+        restart=false;
+    }
     if(state) {
         state = false;
         let totalSeconds = sessionAmount * 60 + leftoversAdd;
@@ -35,6 +45,9 @@ const startTimer = () => {
                 clearInterval(myInterval);
                 state=true;
                 startBtn.textContent="restart";
+                document.title="work session done!";
+                round++;
+                restart=true;
             }
         }
         myInterval = setInterval(updateSeconds, 1000);

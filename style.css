@@ -100,17 +100,19 @@ p {
     text-transform: uppercase;
     letter-spacing: 1px;
     border: none;
-    background: none;
+    background-color: #F4ACB7;
+    border-radius: 20%;
     outline: none;
     color: #45353A;
 }
 
 .button-start:hover {
     color: #F4ACB7;
+    background-color: #45353A;
 }
 
 hr {
-    border: 1px #F4ACB7;
+    border: 3px #45353A;
 }
 
 .to-do-container {
@@ -192,4 +194,14 @@ li {
 
 .task {
     width: 80%;
+}
+
+.heart-bar {
+    display: flex;
+    justify-content: space-evenly;
+    width: 80%;
+}
+
+.first-heart, .second-heart, .third-heart, .fourth-heart {
+    width: 20%;
 }
