@@ -57,7 +57,7 @@ p {
 }
 
 .left-side {
-    top: 100px;
+    top: 0;
     left: 0;
     transform-origin: right center;
     transform: rotate(0deg);
@@ -68,7 +68,7 @@ p {
 }
 
 .right-side {
-    top: 100px;
+    top: 0;
     left: 100px;
     transform-origin: left center;
     transform: rotate(0deg);
