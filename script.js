@@ -34,6 +34,7 @@ const startTimer = () => {
                 bells.play();
                 clearInterval(myInterval);
                 state=true;
+                startBtn.textContent="restart";
             }
         }
         myInterval = setInterval(updateSeconds, 1000);
