@@ -134,7 +134,7 @@ hr {
 }
 
 .input-item {
-    width: 90%;
+    max-width: 90%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -194,5 +194,5 @@ li {
 }
 
 .first-heart, .second-heart, .third-heart, .fourth-heart {
-    width: 20%;
+    width: 40%;
 }
