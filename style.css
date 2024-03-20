@@ -200,6 +200,7 @@ li {
     display: flex;
     justify-content: space-evenly;
     width: 80%;
+    margin-top: 20px;
 }
 
 .first-heart, .second-heart, .third-heart, .fourth-heart {
